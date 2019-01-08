@@ -1,0 +1,5 @@
+CREATE VIEW product_view AS
+SELECT products.id,products.product_name, categories.category_name, products.unique_id, products.price, products.cost_price, products.StartingInventory, products.InventoryOnHand, products.MinimumRequired
+FROM products
+INNER JOIN categories
+ON products.category_id=categories.id
