@@ -16,8 +16,8 @@
                         <span>Inventory</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="add_inventory.php">Add Product</a></li>
-                        <li><a  href="view_products.php">View Products</a></li>
+                        <li><a  href="inventories.php">Manage Inventories</a></li>
+                        <li><a  href="categories.php">Manage Categories</a></li>
                     </ul>
                 </li>
 
@@ -80,8 +80,7 @@
                         <span>Customers</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="add_customer.php">Add Customers</a></li>
-                        <li><a  href="view_customers.php">View Customers</a></li>
+                        <li><a  href="customers.php">Manage Customers</a></li>
                     </ul>
                 </li>
 

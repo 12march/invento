@@ -16,23 +16,24 @@ class db
         if(!empty($where_clause))
         {
             // check to see if the 'where' keyword exists
-            if(substr(strtoupper(trim($where_clause)), 0, 5) != 'WHERE')
+            if(substr(strtoupper(trim($where_clause)), 0, 5) == 'WHERE')
             {
                 // not found, add keyword
-                $whereSQL = " WHERE ".$where_clause;
-            } else
+                $whereSQL = " ".$where_clause;
+            } elseif (substr(strtoupper(trim($where_clause)), 0, 5) == 'ORDER')
+            {
+                // not found, add keyword
+                $whereSQL = " ".$where_clause;
+            }else
             {
                 $whereSQL = " ".trim($where_clause);
             }
         }
        
         // build the query
-        $sql = "SELECT * FROM ".$table_name.$whereSQL . " ORDER BY id desc";
+        $sql = "SELECT * FROM ".$table_name.$whereSQL ;
 
-        if($conn->query($sql)== true){
-            $result =$conn->query($sql);
-            return $result;
-        }
+            return $conn->query($sql);
     
     }
     

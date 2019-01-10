@@ -1,7 +1,7 @@
             <footer class="sticky-footer">
                 <div class="container">
                     <div class="text-center">
-                        <small>Copyright &copy; Immanuel 2018</small>
+                        <small>Copyright &copy; Immanuel <?= date("Y"); ?></small>
                     </div>
                 </div>
             </footer>

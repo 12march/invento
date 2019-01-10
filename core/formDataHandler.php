@@ -32,3 +32,16 @@ if (isset($_POST['add_customer']))
     $obj = new customer();
     $obj->insert($first_name, $last_name, $phone, $email);
 }
+
+
+/*=============================================
+                Add New Category
+=============================================*/
+if (isset($_POST['add_category']))
+{
+        
+    $category = test_input($_POST['category']);
+        
+    $obj = new category();
+    $obj->insert($category);
+}
