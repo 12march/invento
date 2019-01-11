@@ -4,6 +4,9 @@ include('layouts/header.php');
 include('controller/customerController.php');
 confirm_login();
 
+// collect & pass form params
+include("core/formDataHandler.php");
+
 $customers = new customer();
 $result = $customers->allCustomers();
 ?>
@@ -120,7 +123,7 @@ $result = $customers->allCustomers();
                                 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" name="add_inventory" class="btn btn-primary">Submit</button>
+                                    <button type="submit" name="add_customer" class="btn btn-primary">Submit</button>
                                 </div>
                                 
                             </form>

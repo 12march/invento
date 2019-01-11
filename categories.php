@@ -58,7 +58,7 @@ $result = $categories->allCategories();
                                                 <td width="70%"><?= $row['category_name']; ?></td>
                                                 <td class="text-center">
 <!--                                                    <label for="exampleFormControlSelect1">Add to invoice</label>-->
-                                                     <span id="pendInvoice" onclick="pendingInvoice();" class='btn btn-xs btn-info'><i class='fa fa-gear fa-lg'></i></span>
+                                                     <span id="pendInvoice" class='btn btn-xs btn-info' data-toggle="modal" data-target="#exampleModal3" data-whatever="@mdo"><?= $row['id'] ?><i class='fa fa-gear fa-lg'></i></span>
                                                 </td>
                                             </tr>
                                        <?php endwhile ?>
@@ -82,6 +82,38 @@ $result = $categories->allCategories();
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel5">Add Category</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                           
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Category:</label>
+                                    <input type="text" name="category" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" name="add_category" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <!--============== //END ===============-->
+            
+            
+        <!--========= MODAL EDIT CATEGORY  ============-->
+            
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel5">Edit Category</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

@@ -26,8 +26,8 @@ class customer
         $row = $result->fetch_assoc();
         
         if($email == $row['email']){
-            $_SESSION['ErrorMessage']="Product already Exist";
-            header("Location:add_inventory.php");
+            $_SESSION['ErrorMessage']="Customer already Exist";
+            header("Location:customers.php");
             exit;
         } else {
         
@@ -38,11 +38,11 @@ class customer
             // and redirect
             if (!$conn->query($sql)) {
                 $_SESSION['SuccessMessage']="Customer Added Successfully";
-                header("Location:view_customers.php");
+                header("Location:customers.php");
                 exit;
             } else {
                 $_SESSION['ErrorMessage']="Error: " . $sql . "<br>" . mysqli_error($conn);
-                header("Location:add_inventory.php");
+                header("Location:customers.php");
                 exit;
             }
         }

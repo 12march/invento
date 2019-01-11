@@ -9,8 +9,8 @@ class dashboard
     public function ProductsValue()
     {
         //db params
-        $table = 'products';
-        $column = "cost_price";
+        $table = 'stock_value';
+        $column = "totalValue";
         
         // calling DB get method
         $result = DB::sum($table, $column);
